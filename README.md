@@ -1,97 +1,14 @@
-AI CV Matcher
-An AI-powered Resume Matching System that compares a candidate's CV with job descriptions and calculates the matching score. The project also identifies missing skills and provides personalized recommendations to improve the resume.
-
-Project Overview
-This project helps job seekers evaluate how well their resume matches a specific job description using Natural Language Processing (NLP) and Sentence Transformers.
-
-The system:
-
-Extracts text from resumes.
-Computes semantic similarity between resumes and job descriptions.
-Calculates a CV Match Score.
-Identifies missing skills.
-Generates learning recommendations for missing skills.
-Features
-Resume Analysis
-Job Description Matching
-Match Score Calculation
-Semantic Search using Sentence Transformers
-Missing Skills Detection
-Personalized Learning Recommendations
-Technologies Used
-Python
-Pandas
-NumPy
-Sentence Transformers
-Hugging Face
-PyPDF2
-Google Colab -Streamlit
-Dataset
-The project uses:
-
-Job postings dataset
-Resume (CV) PDF
-Skills extracted from job descriptions
-Workflow
-Load job dataset.
-Extract text from the uploaded CV.
-Generate embeddings using Sentence Transformers.
-Compute cosine similarity.
-Rank jobs by similarity score.
-Extract missing skills.
-Recommend learning resources for each missing skill.
-Model
-Embedding Model:
-
-all-MiniLM-L6-v2
-Similarity Metric:
-
-Cosine Similarity
-Output
-The application provides:
-
-Best Matching Jobs
-Match Score (%)
-Missing Skills
-Learning Recommendations
-Example:
-
-Job Title	Match Score
-Data Engineer	62.68%
-Data Analyst	58.41%
-Example Missing Skills:
-
-ETL
-Cloud Technologies
-Data Warehousing
-Docker
-Git
-Project Structure
-AI-CV-Matcher/
+AI CV Matcher 🤖📄An AI-powered Resume Matching System that evaluates candidate CVs against job descriptions using advanced Natural Language Processing (NLP) and Sentence Transformers. Instead of relying solely on basic keyword matching, the application computes semantic similarity, identifies skill gaps, and suggests actionable learning recommendations to help job seekers optimize their applications.📌 Project OverviewAI CV Matcher helps job seekers analyze how well their background aligns with specific roles. By parsing text and generating vector embeddings, the system calculates contextual match scores, pinpoints missing critical skills, and automatically recommends targeted resources to bridge those gaps.Key CapabilitiesText Extraction: Extracts raw text directly from PDF resumes.Semantic Similarity: Computes context-aware similarity scores between resumes and job descriptions.Smart Matching: Ranks target job listings based on calculated relevance scores.Skill Gap Identification: Detects missing key skills required for selected job roles.Learning Recommendations: Provides customized suggestions and learning resources for missing competencies.✨ FeaturesResume Analysis: Automated parsing and text processing of uploaded CVs.Job Description Matching: High-accuracy semantic alignment using NLP techniques.CV Match Score: Contextual percentage score indicating role suitability.Semantic Search: Powered by high-performance Sentence Transformers embeddings.Missing Skills Detection: Real-time extraction of unfulfilled skill requirements.Personalized Recommendations: Dynamic resource links tailored to missing skills.🛠️ Technologies UsedLanguage & Core Libraries: Python, Pandas, NumPyNLP & AI: Sentence Transformers, Hugging FaceParsing & App Framework: PyPDF2, StreamlitDevelopment Environment: Google Colab📊 Dataset & InputsJob Postings Dataset: Structured collection of job postings and requirements (all_job_post.csv).Resume Input: User-uploaded candidate CV (sample_cv.pdf).Skills Taxonomy: Extracted skill sets associated with target job categories.🔄 Workflow ArchitectureLoad Data: Import and preprocess job posting datasets.Text Extraction: Parse text from uploaded CV PDFs using PyPDF2.Embedding Generation: Transform CV and job texts into dense vector embeddings via Sentence Transformers.Similarity Computation: Compute Cosine Similarity between vector representations.Job Ranking: Rank opportunities by relevance based on similarity percentage.Gap Analysis: Compare candidate skills against job requirements to output missing skills.Resource Mapping: Generate learning paths and recommendations for identified skill gaps.🤖 Model DetailsEmbedding Model: all-MiniLM-L6-v2 (Sentence Transformers)Similarity Metric: Cosine Similarity📈 Sample OutputJob Match ScoresJob TitleMatch Score (%)Data Engineer62.68%Data Analyst58.41%Identified Missing Skills ExampleETL PipelinesCloud Technologies (AWS / GCP / Azure)Data WarehousingDocker & ContainerizationVersion Control (Git)📁 Project StructurePlaintextAI-CV-Matcher/
 │
-├── app.py
-├── matcher.ipynb
-├── requirements.txt
-├── recommendation.py
+├── app.py                   # Streamlit web application entry point
+├── matcher.ipynb            # Jupyter Notebook for experimentation & model testing
+├── requirements.txt         # Project dependencies
+├── recommendation.py        # Logic for skill extraction & learning recommendations
+│
 ├── data/
-│   ├── all_job_post.csv
-│   └── sample_cv.pdf
-├── README.md
-└── images/
-
-
-##  Future Improvements
-
-- Support DOCX resumes
-- ATS compatibility analysis
-- Resume optimization suggestions
-- Multiple language support
-- Integration with LinkedIn Jobs
-- LLM-powered resume feedback
-
-
-##  Author
-
-**Rawan Abdelhamied**
-
-AI Student | Data Analytics | Machine Learning
+│   ├── all_job_post.csv     # Job descriptions dataset
+│   └── sample_cv.pdf        # Example candidate resume
+│
+├── images/                  # Screenshots and UI assets
+└── README.md                # Project documentation
+🚀 Future Improvements[ ] Add support for DOCX resume formats.[ ] Implement comprehensive ATS (Applicant Tracking System) compatibility scoring.[ ] Integrate LLM-powered feedback for detailed resume rewrite suggestions.[ ] Enable multi-language resume and job posting analysis.[ ] Direct integration with live job boards (e.g., LinkedIn Jobs API).👤 AuthorRawan AbdelhamiedAI Student | Data Analytics | Machine Learning
