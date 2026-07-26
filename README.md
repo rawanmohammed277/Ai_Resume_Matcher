@@ -1,4 +1,70 @@
-AI CV Matcher 🤖📄An AI-powered Resume Matching System that evaluates candidate CVs against job descriptions using advanced Natural Language Processing (NLP) and Sentence Transformers. Instead of relying solely on basic keyword matching, the application computes semantic similarity, identifies skill gaps, and suggests actionable learning recommendations to help job seekers optimize their applications.📌 Project OverviewAI CV Matcher helps job seekers analyze how well their background aligns with specific roles. By parsing text and generating vector embeddings, the system calculates contextual match scores, pinpoints missing critical skills, and automatically recommends targeted resources to bridge those gaps.Key CapabilitiesText Extraction: Extracts raw text directly from PDF resumes.Semantic Similarity: Computes context-aware similarity scores between resumes and job descriptions.Smart Matching: Ranks target job listings based on calculated relevance scores.Skill Gap Identification: Detects missing key skills required for selected job roles.Learning Recommendations: Provides customized suggestions and learning resources for missing competencies.✨ FeaturesResume Analysis: Automated parsing and text processing of uploaded CVs.Job Description Matching: High-accuracy semantic alignment using NLP techniques.CV Match Score: Contextual percentage score indicating role suitability.Semantic Search: Powered by high-performance Sentence Transformers embeddings.Missing Skills Detection: Real-time extraction of unfulfilled skill requirements.Personalized Recommendations: Dynamic resource links tailored to missing skills.🛠️ Technologies UsedLanguage & Core Libraries: Python, Pandas, NumPyNLP & AI: Sentence Transformers, Hugging FaceParsing & App Framework: PyPDF2, StreamlitDevelopment Environment: Google Colab📊 Dataset & InputsJob Postings Dataset: Structured collection of job postings and requirements (all_job_post.csv).Resume Input: User-uploaded candidate CV (sample_cv.pdf).Skills Taxonomy: Extracted skill sets associated with target job categories.🔄 Workflow ArchitectureLoad Data: Import and preprocess job posting datasets.Text Extraction: Parse text from uploaded CV PDFs using PyPDF2.Embedding Generation: Transform CV and job texts into dense vector embeddings via Sentence Transformers.Similarity Computation: Compute Cosine Similarity between vector representations.Job Ranking: Rank opportunities by relevance based on similarity percentage.Gap Analysis: Compare candidate skills against job requirements to output missing skills.Resource Mapping: Generate learning paths and recommendations for identified skill gaps.🤖 Model DetailsEmbedding Model: all-MiniLM-L6-v2 (Sentence Transformers)Similarity Metric: Cosine Similarity📈 Sample OutputJob Match ScoresJob TitleMatch Score (%)Data Engineer62.68%Data Analyst58.41%Identified Missing Skills ExampleETL PipelinesCloud Technologies (AWS / GCP / Azure)Data WarehousingDocker & ContainerizationVersion Control (Git)📁 Project StructurePlaintextAI-CV-Matcher/
+AI CV Matcher 🤖📄
+An AI-powered Resume Matching System that evaluates candidate CVs against job descriptions using advanced Natural Language Processing (NLP) and Sentence Transformers. Instead of relying solely on basic keyword matching, the application computes semantic similarity, identifies skill gaps, and suggests actionable learning recommendations to help job seekers optimize their applications.
+
+📌 Project Overview
+AI CV Matcher helps job seekers analyze how well their background aligns with specific roles. By parsing text and generating vector embeddings, the system calculates contextual match scores, pinpoints missing critical skills, and automatically recommends targeted resources to bridge those gaps.
+
+Key Capabilities
+Text Extraction: Extracts raw text directly from PDF resumes.
+
+Semantic Similarity: Computes context-aware similarity scores between resumes and job descriptions.
+
+Smart Matching: Ranks target job listings based on calculated relevance scores.
+
+Skill Gap Identification: Detects missing key skills required for selected job roles.
+
+Learning Recommendations: Provides customized suggestions and learning resources for missing competencies.
+
+✨ Features
+Resume Analysis: Automated parsing and text processing of uploaded CVs.
+
+Job Description Matching: High-accuracy semantic alignment using NLP techniques.
+
+CV Match Score: Contextual percentage score indicating role suitability.
+
+Semantic Search: Powered by high-performance Sentence Transformers embeddings.
+
+Missing Skills Detection: Real-time extraction of unfulfilled skill requirements.
+
+Personalized Recommendations: Dynamic resource links tailored to missing skills.
+
+🛠️ Technologies Used
+Language & Core Libraries: Python, Pandas, NumPy
+
+NLP & AI: Sentence Transformers, Hugging Face
+
+Parsing & App Framework: PyPDF2, Streamlit
+
+Development Environment: Google Colab
+
+📊 Dataset & Inputs
+Job Postings Dataset: Structured collection of job postings and requirements (all_job_post.csv).
+
+Resume Input: User-uploaded candidate CV (sample_cv.pdf).
+
+Skills Taxonomy: Extracted skill sets associated with target job categories.
+
+🔄 Workflow Architecture
+Load Data: Import and preprocess job posting datasets.
+
+Text Extraction: Parse text from uploaded CV PDFs using PyPDF2.
+
+Embedding Generation: Transform CV and job texts into dense vector embeddings via Sentence Transformers.
+
+Similarity Computation: Compute Cosine Similarity between vector representations.
+
+Job Ranking: Rank opportunities by relevance based on similarity percentage.
+
+Gap Analysis: Compare candidate skills against job requirements to output missing skills.
+
+Resource Mapping: Generate learning paths and recommendations for identified skill gaps.
+
+🤖 Model Details
+Embedding Model: all-MiniLM-L6-v2 (Sentence Transformers)
+
+Similarity Metric: Cosine Similarity
+
+AI-CV-Matcher/
 │
 ├── app.py                   # Streamlit web application entry point
 ├── matcher.ipynb            # Jupyter Notebook for experimentation & model testing
@@ -11,4 +77,19 @@ AI CV Matcher 🤖📄An AI-powered Resume Matching System that evaluates candid
 │
 ├── images/                  # Screenshots and UI assets
 └── README.md                # Project documentation
-🚀 Future Improvements[ ] Add support for DOCX resume formats.[ ] Implement comprehensive ATS (Applicant Tracking System) compatibility scoring.[ ] Integrate LLM-powered feedback for detailed resume rewrite suggestions.[ ] Enable multi-language resume and job posting analysis.[ ] Direct integration with live job boards (e.g., LinkedIn Jobs API).👤 AuthorRawan AbdelhamiedAI Student | Data Analytics | Machine Learning
+
+🚀 Future Improvements
+[ ] Add support for DOCX resume formats.
+
+[ ] Implement comprehensive ATS (Applicant Tracking System) compatibility scoring.
+
+[ ] Integrate LLM-powered feedback for detailed resume rewrite suggestions.
+
+[ ] Enable multi-language resume and job posting analysis.
+
+[ ] Direct integration with live job boards (e.g., LinkedIn Jobs API).
+
+👤 Author
+Rawan Abdelhamied
+
+AI Student | Data Analytics | Machine Learning
