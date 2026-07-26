@@ -92,6 +92,6 @@ AI-CV-Matcher/
 
 ##  Author
 
-**Shahd**
+**Rawan Abdelhamied**
 
 AI Student | Data Analytics | Machine Learning
